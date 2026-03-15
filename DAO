@@ -1,0 +1,24 @@
+import java.sql.*;
+
+public class CoursDAO {
+
+    public void ajouterCours(String nom) {
+
+        try {
+
+            Connection con = DriverManager.getConnection(
+            "jdbc:mysql://localhost:3306/ict207","root","");
+
+            PreparedStatement ps = con.prepareStatement(
+            "INSERT INTO cours(nom_cours) VALUES(?)");
+
+            ps.setString(1, nom);
+
+            ps.executeUpdate();
+
+        } catch(Exception e) {
+            System.out.println(e);
+        }
+
+    }
+}
