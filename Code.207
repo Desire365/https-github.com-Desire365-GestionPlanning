@@ -1,0 +1,27 @@
+import javax.swing.*;
+
+public class MainInterface {
+
+    public static void main(String[] args) {
+
+        JFrame frame = new JFrame("Gestion des Cours");
+
+        JLabel labelCours = new JLabel("Nom du cours");
+        labelCours.setBounds(50,50,120,30);
+
+        JTextField coursField = new JTextField();
+        coursField.setBounds(180,50,150,30);
+
+        JButton bouton = new JButton("Ajouter");
+        bouton.setBounds(50,120,100,30);
+
+        frame.add(labelCours);
+        frame.add(coursField);
+        frame.add(bouton);
+
+        frame.setSize(400,300);
+        frame.setLayout(null);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}
