@@ -1,0 +1,16 @@
+public class Cours {
+
+    private int id;
+    private String nom;
+    private String enseignant;
+
+    public Cours(int id, String nom, String enseignant) {
+        this.id = id;
+        this.nom = nom;
+        this.enseignant = enseignant;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+}
